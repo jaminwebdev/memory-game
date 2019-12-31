@@ -1,6 +1,6 @@
 export default class Game {
-    constructor() {
-        this.pairsRemain = 6;
+    constructor(numOfPairs) {
+        this.pairsRemain = numOfPairs;
         this.moves = 0;
     }
 

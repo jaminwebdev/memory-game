@@ -14,16 +14,16 @@ window.addEventListener('load', () => {
     initializeGame();
 });
 
-const initializeGame = (numOfMatches=6) => {
+const initializeGame = (numOfPairs=6) => {
 
     //reset state object
-    state.game = new Game();
+    state.game = new Game(numOfPairs);
 
     //update stats View
-    statsView.updateStats(0, 6);
+    statsView.updateStats(0, numOfPairs);
 
     //set up view items
-    cardsView.setupCards(numOfMatches);
+    cardsView.setupCards(numOfPairs);
 
     //load persistent data
     const pastGames = localStorage.games;
