@@ -1,0 +1,45 @@
+$color-black: #000;
+$color-white: #fff;
+
+.card {
+    //Functionality
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    position: relative;
+    height: 225px;
+    margin: 10px 35px;
+
+    &__side {
+
+        height: 100%;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15); 
+
+        &--front {
+            background-color: $color-white;
+            background-size: cover;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            background-size: cover;
+        }
+    }
+
+
+}
+
+.chosen__side--front {
+    transform: rotateY(-180deg);
+}
+
+.chosen__side--back {
+    transform: rotateY(0);
+}
